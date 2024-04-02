@@ -1,0 +1,28 @@
+﻿@model Lab2._2.Models.Event
+
+@{
+    ViewBag.Title = "InsertEvent";
+}
+
+<h1>Add Event</h1>
+
+@using (Html.BeginForm("InsertEvent", "Event", FormMethod.Post))
+{
+        
+        <div>
+            @Html.LabelFor(e => e.name)
+            @Html.TextBoxFor(e => e.name)
+            @Html.ValidationMessageFor(e => e.name)
+        </div>
+
+        <div>
+            @Html.LabelFor(e => e.location)
+            @Html.TextBoxFor(e => e.location)
+            @Html.ValidationMessageFor(e => e.location)
+        </div>
+
+        
+        <button type="submit" class="m-2 btn-dark">Add</button>
+
+}
+

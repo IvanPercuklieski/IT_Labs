@@ -1,0 +1,14 @@
+﻿@model Lab2._2.Models.Event
+
+@{
+    ViewBag.Title = "ViewEvent";
+}
+
+<h1>View Event</h1>
+
+<div class="row">
+    <p>ID:@Model.id</p>
+    <p>Name: @Model.name</p>
+    <p>Location: @Model.location</p>
+    <a style="width: 100px" href="@Url.Action("Table", "Event")" class="btn btn-primary">Back</a>
+</div>
